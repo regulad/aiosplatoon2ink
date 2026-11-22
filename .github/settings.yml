@@ -1,26 +1,19 @@
-# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+# Repository configuration, managed by the Settings app
+# (https://github.com/repository-settings/app). The shared defaults come from
+# regulad/.github; this file sets only what is this repository's own.
+_extends: .github
 
 repository:
-  # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
-  description: Typed asyncio client for splatoon2.ink's Splatoon 2 feeds
-
-  # GitHub allows at most 20 topics, each lowercase letters, digits and hyphens.
-  topics: splatoon, splatoon2, splatoon-2, splatoon2ink, splatnet, splatnet2, nintendo, nintendo-switch, splatfest, salmon-run, python, asyncio, aiohttp, pydantic, pydantic-v2, api-client, api-wrapper, typed, type-hints, gaming
-
-  # Either `true` to make the repository private, or `false` to make it public.
+  name: aiosplatoon2ink
+  description: >-
+    Typed asyncio client for splatoon2.ink's Splatoon 2 feeds
+  homepage: ""
   # Public: PepperCord's image installs it from git without a token.
   private: false
-
-  has_issues: true
-  # Off: the README is the documentation.
-  has_wiki: false
-  has_projects: false
-  has_discussions: false
-
+  # Topics: comma-and-space separated string, NOT a YAML list.
+  # GitHub allows at most 20 topics, each lowercase letters, digits and hyphens.
+  topics: splatoon, splatoon2, splatoon-2, splatoon2ink, splatnet, splatnet2, nintendo, nintendo-switch, splatfest, salmon-run, python, asyncio, aiohttp, pydantic, pydantic-v2, api-client, api-wrapper, typed, type-hints, gaming
   default_branch: main
-  delete_branch_on_merge: true
-  # Off: nothing merges on its own here. There's no Dependabot, since a library's lock only pins its tools.
-  allow_auto_merge: false
 
 branches:
   - name: main
